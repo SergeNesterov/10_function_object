@@ -1,0 +1,11 @@
+body {
+    background-image: url(https://media.istockphoto.com/vectors/professional-people-to-labour-day-celebration-vector-id1147845615);
+}
+
+.card-body {
+    background-color: antiquewhite;
+}
+
+.card-header, .card-footer {
+    background-color: rgb(167, 250, 204);
+}
