@@ -29,12 +29,12 @@ const personGenerator = {
             "id_2": "Максим",
             "id_3": "Иван",
             "id_4": "Артем",
-            "id_5": "Дмитрий",
-            "id_6": "Никита",
+            "id_5": "Владимир",
+            "id_6": "Леонид",
             "id_7": "Михаил",
             "id_8": "Даниил",
             "id_9": "Егор",
-            "id_10": "Андрей"
+            "id_10": "Виктор"
         }
     }`,
     firstNameFemaleJson: `{
@@ -50,37 +50,6 @@ const personGenerator = {
             "id_8": "Кристина",
             "id_9": "Светлана",
             "id_10": "Евгения"
-        }
-    }`,
-    patronymicMaleJson: `{
-        "count": 10,
-        "list": {
-            "id_1": "Александрович",
-            "id_2": "Сергеевич",
-            "id_3": "Андревич",
-            "id_4": "Егорович",
-            "id_5": "Никитович",
-            "id_6": "Максимович",
-            "id_7": "Артемович",
-            "id_8": "Михайлович",
-            "id_9": "Дмитриевич",
-            "id_10": "Евгеньевич"
-        }
-    }`,
-
-    patronymicFemaleJson: `{
-        "count": 10,
-        "list": {
-            "id_1": "Александровна",
-            "id_2": "Сергеевна",
-            "id_3": "Андревна",
-            "id_4": "Егоровна",
-            "id_5": "Никитовна",
-            "id_6": "Максимовна",
-            "id_7": "Артемовна",
-            "id_8": "Михайловна",
-            "id_9": "Дмитриевна",
-            "id_10": "Евгеньевна"
         }
     }`,
 
@@ -168,11 +137,11 @@ const personGenerator = {
         }
     },
 
-    randomPatronymic: function() { // Функция генерации мужского и женского Отчества
+    randomPatronymic: function() { // Функция генерации мужского и женского Отчества из мужских имен
         if (this.person.gender == 'Мужчина, ') {
-            return this.randomValue(this.patronymicMaleJson);
+            return this.randomValue(this.firstNameMaleJson) + "ович";
         } else {
-            return this.randomValue(this.patronymicFemaleJson);
+            return this.randomValue(this.firstNameMaleJson) + "овна";
         }
     },
 
